@@ -1,0 +1,31 @@
+/******************************************************************************
+
+Matheus Torres 03/10
+
+(1) Ler os valores e atribuí-los aos campos do registro
+(2) Emitir a mensagem de “Produto em Promoção” caso o preço seja inferior a 4.
+Caso contrário, imprimir “Produto Cadastrado”
+*******************************************************************************/
+
+#include <stdio.h>
+
+typedef struct Produto {
+    long codigo;
+   
+    float preco;
+   
+}  Produto;
+
+int main () {
+    Produto p;
+    printf("Digite codigo nome e preco");
+    scanf("%ld  %f",&p.codigo,&p.preco);
+   
+    printf("Valores Digitados\n");
+    printf("%ld  %f", p.codigo,p.preco);
+   
+    if (p.preco < 4) printf ("Produto em promocao");
+    else             printf ("Produto Cadastrado");
+   
+    return 0;
+}
