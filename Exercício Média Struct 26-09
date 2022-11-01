@@ -1,0 +1,53 @@
+/******************************************************************************
+
+Matheus Torres 26/09
+
+1) CRIAR UMA FUNÇÃO CHAMADA lenota que le uma nota e a valida - tem que estar entre 0 e 10. A função deve RETORNAR essa nota VÁLIDA. 
+2) Substituir os dois scanfs de Nota1 e Nota2 pela chamada à função criada.
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+struct Aluno{
+	int matri;
+	float n1,n2;
+};
+
+int main (){
+	
+	setlocale(LC_ALL, "Portuguese");
+	int i;
+	float soma[tam],somadasala;
+	struct Aluno vet[tam];
+	for(i = 0; i < tam ; i++){
+		printf("-------------CADASTRO ALUNO-------------\n\n");
+		printf("Digite a matricula: "); scanf ("%d", &vet[i].matri);
+		printf("Digite a nota da n1: "); scanf ("%f", &vet[i].n1);
+		printf("Digite a nota da n2: "); scanf ("%f", &vet[i].n2);
+		printf("\n\n");
+		soma[i] = vet[i].n1 + vet[i].n2;
+		somadasala = somadasala + soma[i]/2;	
+	}
+	
+	system("cls");
+	
+	for(i = 0 ; i < tam ; i++){
+		printf("---------------Boletim do aluno %d---------------\n\n", vet[i].matri);
+		printf("Matricula:  %d\n", vet[i].matri);
+		printf("Nota da n1: %.2f\n", vet[i].n1);
+		printf("Nota da n2: %.2f\n", vet[i].n2);
+		if(soma > 7 ){
+			printf("Média : %.2f -- Acima da média \n\n", soma[i]/2);
+		}else{
+			printf("Média : %.2f -- Abaixo da média \n\n", soma[i]/2);
+		}
+		
+	}
+	
+	printf("-----------------Notas da sala:-----------------\n\n");
+	printf("A media todal da sala: %.2f\n", somadasala/tam);
+	printf("Total de alunos : %d\n", tam);
+}
+
