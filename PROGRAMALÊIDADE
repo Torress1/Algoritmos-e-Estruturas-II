@@ -2,7 +2,7 @@
 
 Olá, meu nome é Matheus Torres;
 Data: 29/08;
-
+PROGRAMA QUE Ê DUAS IDADES E MOSTRA A DIFERENÇA ENTRE ELAS.
 *******************************************************************************/
 #include <stdio.h>
 
