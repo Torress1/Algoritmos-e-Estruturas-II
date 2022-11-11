@@ -1,0 +1,18 @@
+/******************************************************************************
+
+Matheus Torres
+Lista 5
+5)O programa deve informar um número por meio de ascii
+
+*******************************************************************************/
+#include <stdio.h>
+
+int ascii (int n) {
+    return (n>= 'a' && n <= 'z');
+}
+int main(){
+    char n;
+    
+    scanf("%c", &n);
+    printf("Retorno do char %d", ascii (n));
+}
